@@ -162,10 +162,15 @@ def cmd_serve(
 
 @app.callback(invoke_without_command=True)
 def _global(
+    ctx: typer.Context,
     _version: bool = typer.Option(False, "--version", help="输出版本号"),
 ):
     """qqbot — QQ Bot C2C 消息推送 CLI"""
     if _version:
         from . import __version__
         print(f"qqbot-cli v{__version__}")
+        sys.exit(0)
+
+    if ctx.invoked_subcommand is None:
+        print(ctx.get_help())
         sys.exit(0)
