@@ -1,0 +1,16 @@
+{
+  "name": "qqbot-cli-skill",
+  "description": "QQ Bot 消息推送 CLI 工具 — 通过 QQ Bot API v2 发送 C2C 私聊消息",
+  "version": "0.1.0",
+  "author": {
+    "name": "kex"
+  },
+  "skills": "./skill",
+  "keywords": [
+    "qqbot",
+    "qq-bot",
+    "notification",
+    "messaging",
+    "c2c"
+  ]
+}

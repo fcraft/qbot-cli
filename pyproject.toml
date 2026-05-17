@@ -1,0 +1,19 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "qqbot-cli"
+version = "0.1.0"
+description = "QQ Bot 消息推送 CLI — 通过 QQ Bot API v2 发送 C2C 私聊消息"
+requires-python = ">=3.10"
+dependencies = [
+    "typer>=0.15",
+    "cryptography>=41.0",
+]
+
+[project.scripts]
+qqbot = "qqbot_cli.main:app"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/qqbot_cli"]
